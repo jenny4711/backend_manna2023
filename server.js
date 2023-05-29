@@ -2,7 +2,7 @@ const app = require("./app");
 const { PORT } = require("./config");
 
  app.listen(PORT,function(){
-   console.log("Server started on 3001")
+   console.log(`Server started on ${PORT}`)
  })
 
 
