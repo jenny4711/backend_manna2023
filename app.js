@@ -2,12 +2,14 @@ const express = require("express");
 const app = express();
 const cors=require('cors')
 const ExpressError = require("./expressError");
+const { authenticateJWT } = require("./middleware/auth");
 
 
 
 
 app.use(cors())
 app.use(express.json());
+app.use(authenticateJWT);
 
 const routes = require("./routes/users");
 
